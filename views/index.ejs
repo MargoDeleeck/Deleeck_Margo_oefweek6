@@ -1,0 +1,24 @@
+<% include header %>
+
+<nav>
+      <a href="/">Expo's&nbsp;&nbsp;&nbsp;</a>
+  		<a href="#">Info&nbsp;&nbsp;&nbsp;</a>
+  		<a href="#">Contact</a>
+</nav>
+<div class="categorieen">
+  <% for (var i = 0; i < categorieen.length; i++) { %>
+    <a href="/categorieen/<%- i %>"><%- categorieen[i] %></a>
+  <% } %>
+</div>
+
+
+  <% var teller = 1; %>
+  <% nieuws.forEach(function(item){ %>
+    <section>
+
+        <div class="afb"><a href=/items/<%- item.id %>><img src="/img/<%- item.afbeelding %>" alt="<%- item.titel %>"></a></div>
+        <h2><a href=/items/<%- item.id %>><%- item.titel %></a></h2>
+        <h5><a href=/items/<%- item.id %>><%- item.datum %></a></h5>
+
+    </section>
+    <% teller++;}); %>

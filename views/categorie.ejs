@@ -1,0 +1,25 @@
+<% include header %>
+
+<nav>
+      <a href="/">Expo's&nbsp;&nbsp;&nbsp;</a>
+  		<a href="#">Info&nbsp;&nbsp;&nbsp;</a>
+  		<a href="#">Contact</a>
+</nav>
+<div class="categorieen">
+<a><%- categorieen[id] %> </a>
+
+  <% for (var i = 0; i < items.length; i++) { %>
+    <% if (items[i].categorieen.indexOf(categorieen[id]) !== -1) { %>
+</div>
+      <section>
+
+          <div class="afb"><img src="/img/<%- items[i].afbeelding %>" alt="<%- items[i].titel %>"></div>
+          <h2><a href=/items/<%- items[i].id %>><%- items[i].titel %></a></h2>
+          <h5><a href=/items/<%- items[i].id %>><%- items[i].datum %></a></h5>
+
+
+      </section>
+    <% } %>
+  <% } %>
+
+<% include footer %>
